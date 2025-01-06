@@ -1,0 +1,56 @@
+.bg-light {
+	z-index: -1;
+	position: absolute;
+	background-image: var(--bannerImg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center top;
+	width: 100%;
+	height: clamp(180px, 25vw, 350px);
+}
+
+.container {
+	max-width: 550px;
+	margin: 0 auto;
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+}
+
+h1 {
+	color: white;
+	font-size: 3rem;
+}
+
+button {
+	all: unset;
+}
+
+h1,
+button {
+	margin: 4rem 0 2rem 0;
+}
+
+#todo-input,
+.todo-container {
+	width: 100%;
+	padding: 1rem;
+	border-radius: 0.5rem;
+	background-color: var(--VeryLightGrayishBlue);
+	color: var(--VeryDarkGrayishBlue);
+}
+
+.todo-container {
+	background-color: white;
+	margin-top: 2rem;
+	background-color: var(--VeryLightGrayishBlue);
+}
+
+.todo-item {
+	list-style: none;
+	padding: 1rem;
+	border-bottom: 1px solid var(--LightGrayishBlue);
+	color: var(--VeryDarkGrayishBlue);
+}
