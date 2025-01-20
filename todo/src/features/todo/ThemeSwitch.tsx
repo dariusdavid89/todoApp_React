@@ -4,12 +4,13 @@ import lightModeURL from "../../assets/images/icon-sun.svg";
 
 export function ThemeSwitch() {
 	const [theme, setTheme] = useState<Theme>(
-		() => localStorage.getItem("theme") as Theme
+		() => (localStorage.getItem("theme") as Theme) ?? "light"
 	);
 	useEffect(() => {
 		document.body.dataset["theme"] = theme;
 		localStorage.setItem("theme", theme);
 	}, [theme]);
+	console.log(theme);
 	return (
 		<button onClick={() => setTheme(theme === "light" ? "dark" : "light")}>
 			<img

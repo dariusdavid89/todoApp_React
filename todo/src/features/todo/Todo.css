@@ -26,6 +26,7 @@ h1 {
 
 button {
 	all: unset;
+	cursor: pointer;
 }
 
 h1,
@@ -33,24 +34,93 @@ button {
 	margin: 4rem 0 2rem 0;
 }
 
-#todo-input,
-.todo-container {
+#todo-input {
 	width: 100%;
 	padding: 1rem;
 	border-radius: 0.5rem;
 	background-color: var(--VeryLightGrayishBlue);
 	color: var(--VeryDarkGrayishBlue);
+	outline: none;
+	cursor: pointer;
+}
+
+.input-wrapper {
+	display: flex;
+	align-items: center;
+	background-color: var(--VeryLightGrayishBlue);
+	border-radius: 0.5rem;
+	padding-left: 1rem;
 }
 
 .todo-container {
+	border-radius: 0.5rem;
 	background-color: white;
 	margin-top: 2rem;
 	background-color: var(--VeryLightGrayishBlue);
 }
 
 .todo-item {
+	display: flex;
+	justify-content: space-between;
 	list-style: none;
 	padding: 1rem;
+	cursor: pointer;
 	border-bottom: 1px solid var(--LightGrayishBlue);
 	color: var(--VeryDarkGrayishBlue);
+}
+
+.circle-container {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+
+.circle {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	aspect-ratio: 1;
+	border-radius: 1000px;
+	border: 1px solid var(--DarkGrayishBlue);
+	width: 1.5rem;
+}
+
+.cross {
+	opacity: 0;
+	visibility: hidden;
+	transition: 0.3s ease;
+}
+
+.circle-url {
+	display: none;
+}
+
+.todo-item:hover .cross {
+	opacity: 1;
+	visibility: visible;
+}
+
+.footer {
+	display: flex;
+	align-items: center;
+	background-color: var(--VeryLightGrayishBlue);
+	border-radius: 0.5rem;
+}
+
+.footer button {
+	margin: 0;
+	padding: 0;
+	color: var(--VeryDarkGrayishBlue);
+}
+
+.footer {
+	display: flex;
+	justify-content: space-between;
+	padding: 1rem;
+	border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.btn-container {
+	display: flex;
+	gap: 1.5rem;
 }
