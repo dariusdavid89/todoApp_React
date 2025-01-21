@@ -44,6 +44,10 @@ export function Todo() {
 								</div>
 							</li>
 						))}
+						<div className="mobile-wrapper">
+							<button className="item-btn">items left</button>
+							<button className="clear-btn">Clear Completed</button>
+						</div>
 					</ul>
 					<div className="footer">
 						<button className="item-btn">items left</button>
